@@ -1,36 +1,34 @@
 ## **eItems**
-eItems is an API designed to provide extended information and functionality to the CSGO Item Economy.
+eItems是用来在CSGO里提供更多物品信息和功能的API.
 
-**Dependencies:**
+**必须安装的依赖:**
 
 - [**REST in Pawn** - HTTP client for JSON REST APIs](https://forums.alliedmods.net/showthread.php?t=298024) - ver. 1.3.0+
 
-**Instalation:**
+**安装方法:**
 
-1. Upload configs and eitems.smx to your server.
-2. Change language in eItems.json if needed.
-3. Upload selected language data file to your server. ***(Only if UseLocal is set to true in config)***
-4. Restart your server or load plugin manually.
-5. Upload Graffiti files to server + fastdl. ***(Only if DownloadSprays is set to true in config, skip otherwise)***
+1. 上传config和eitems.smx到你的服务器
+2. 如果有需要的话,在eItems.json里更改语言.
+3. 上传需要的语言文件到你的服务器. ***(仅当UseLocal在配置文件里被设置为true的时候)***
+4. 重启服务器,或者手动加载插件.
 
-**Troubleshooting:**
+**常见报错:**
 
 ```
 [SM] Exception reported: Invalid JSON in line
 ```
-- This happens mostly only for Windows users. Windows have an issue with HTTP/2 requests. Set `UseLocal` to true and upload selected language file (items_XX.json) to data folder.
-
+- 这个问题通常在Windows端发生. Windows处理HTTP/2的请求的时候会有问题. 把 `UseLocal` 改成 true,然后上传eitems_XX.json到你的服务器
 ```
 Native "HTTPRequest.HTTPRequest" was not found
 ```
-- Update Rest In Pawn to version 1.3.0 or newer.
+- 更新 Rest In Pawn
 
 ```
 eItems.smx (eItems): unexpected error 23 in AskPluginLoad callback
 ```
-- Make sure you do not have multiple copies of eitems.smx in plugins folder.
+- plugins文件夹里面可能有多个eitems.smx
 
-**Natives:**
+**源码:**
 ```
 enum WearRemap
 {
